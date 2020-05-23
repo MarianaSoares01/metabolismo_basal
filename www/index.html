@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+  <script src="components/jquery-3.3.1.min.js"></script>
+  <script src="components/loader.js"></script>
+  <script src="components/script.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <section class="container">
+    
+    <div class="page-header">
+      <h2>Taxa de Metabolismo Basal (TMB) <br><small>Preencha todos os campos para calcular sua TMB</small></h2>
+    </div>
+
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Sexo</label>
+        <div class="col-sm-10">
+          <div class="radio">
+            <label>
+              <input type="radio" name="sexo" value="F">
+              Feminino
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="sexo" value="M">
+              Masculino
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Idade</label>
+        <div class="col-sm-10">
+          <div class="input-group">
+            <input type="text" name="idade" id="idade" class="form-control" placeholder="Digite sua idade...">
+            <div class="input-group-addon">anos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Altura</label>
+        <div class="col-sm-10">
+          <div class="input-group">
+            <input type="text" name="altura" id="altura" class="form-control" placeholder="Digite sua altura...">
+            <div class="input-group-addon">cm</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Peso</label>
+        <div class="col-sm-10">
+          <div class="input-group">
+            <input type="text" name="peso" id="peso" class="form-control" placeholder="Digite seu peso...">
+            <div class="input-group-addon">kg</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label">Nível de atividade</label>
+        <div class="col-sm-10">
+          <select class="form-control" id="nivel_atividade">
+            <option value="">Escolha seu nível de atividade</option>
+            <option value="sedentario">Sedentario</option>
+            <option value="levemente_ativo">Levemente ativo</option>
+            <option value="moderadamente_ativo">Moderadamente ativo</option>
+            <option value="muito_ativo">Muito ativo</option>
+            <option value="super_ativo">Super ativo</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn btn-success btn-block" onclick="calcular()">Calcular</button>
+    </form>
+  </section>
+</body>
+</html>
