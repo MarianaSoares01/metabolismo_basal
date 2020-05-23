@@ -6,7 +6,7 @@ function calcular(){
     }
   }
   
-  var atv = $("#nivel_atividade");
+  var atv = document.getElementById("nivel_atividade");
   var NA = atv.options[atv.selectedIndex].text;
 
   var i = $('#idade').val();
