@@ -31,21 +31,8 @@ function calcular(){
     NCD = (TMB * 1.9);
   }
 
-  navigator.vibrate([8000]);
-  navigator.notification.beep(2);
+  navigator.vibrate([1000]);
+  //navigator.notification.beep(2);
   
-  function confirmando(buttonIndex) {
-    if(buttonIndex == 1){
-      alert('Sua Necessidade Calórica Diária é: ' + NCD);
-    } else {
-      alert('Obrigado!');
-    }
-  }
-  
-  navigator.notification.confirm(
-      TMB + 'Deseja saber sua Necessidade Calórica Diária?', // message
-      confirmando,            // callback to invoke with index of button pressed
-      'Sua TMB é: ',           // title
-      ['Sim','Não']     // buttonLabels
-  );
+  alert('Sua Taxa de Metabolismo Basal é: ' + TMB + ". E sua Necessidade Calórica Diária para manter seu peso é: " + NCD);
 }
